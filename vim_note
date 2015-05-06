@@ -1,0 +1,60 @@
+TODO
+status line (vim-airline, buffer)
+naviguate file / windows split
+.vimrc
+github / plugin vs no plugin / 8 bit vs 256 and more (work)
+
+NORMAL MODE
+Press "x"		to delete the character under the cursor.
+Press "dw" 		to delete a word under the cursor.
+Press "d$"		to delete to the end of the line. 
+Press "de"		to delete to end of the word.
+			Command: operator + motion
+
+w/b			move one WORD forward / backward
+e			move to the end of the WORD forward
+
+$		Fin
+0		Home
+
+Pressing just the motion while in Normal mode without an operator will move the cursor as specified.
+Typing a number before a motion repeats it that many times. (ex: "d2w")
+
+U			undo the all line (can be undo with "u")
+rl | R			replace the letter under the cursor with "l" or replace more than one character
+ce			delete the word under the cursor and place you in Insert mode
+
+The change operator is used with the same motions as delete:	c   [number]   motion
+G			move to the bottom of the file
+G3			move to the line 3 (like :3)
+?			search for a phrase in the backward direction
+Ctrl + o		jumping to previously visited locations (Ctrl + i)
+%  			find a matching ),], or }
+:s/old/new/g		substitute "old" with "new" in the all line (g - globally)
+:%s/old/new/g      	to change every occurrence in the whole file.
+:%s/old/new/gc     	to find every occurrence in the whole file, with a prompt whether to substitute or not.
+:#,#s/old/new/g		where #,# are the line numbers of the range of lines where the substitution is to be done.
+:ls			execute an external command - "ls"
+:w filename		saves the whole file under the name "filename"
+
+Save part of the file under "filename"
+- Select the part with v
+- Press :w filename (:'<,'>w filename should appear at the bottom of the screen)
+
+:r filename | !ls	retrieve and merge file or command
+o / O			open a line below / above the cursor and place you in Insert mode
+:set option | nooption	set or remove option (TIP: /test\c search for "test" ignoring case
+:help cmd		find help on "cmd"
+:q 			close window
+
+You can also use  y  as an operator;  yw  yanks one word.
+Completion
+Disable compatible mode :set nocp
+Ctrl + d		show completion (then use <TAB>)
+
+------------------------------------------------------------------------------------------------------------------
+
+Ctrl-d  		move half-page down
+Ctrl-u  		move half-page up
+Vjj>        mark and indent 
+Ctrl-w o    maximise current window
